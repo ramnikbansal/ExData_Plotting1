@@ -59,6 +59,7 @@ print(paste0("It took ",timetaken[1]," seconds to read the file into R"))
 
 # Now subset by only the data for "2007-02-01" and "2007-02-02" dates only.
 smalldata <- alldata[alldata$Date %in% c("1/2/2007","2/2/2007"),]
+datetimecol <- strptime(paste(smalldata[,1],smalldata[,2]),"%d/%m/%Y %H:%M:%S")
 
 ##### PLOT-4
 
